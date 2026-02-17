@@ -62,16 +62,31 @@ High-dimensional vector embeddings (**BGE-M3**) create a 'resonance' between can
 ## 🚦 Getting Started
 
 ### 📦 Quick Start with Docker
-The fastest way to get SmartHire running is via Docker Compose:
+The fastest way to get SmartHire running is via Docker Compose. This will orchestrate the database, redis, AI workers, and the frontend.
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/SmartHire.git
+git clone https://github.com/AmanTShekar/SmartHire-Augmented-Recruitment-System.git
 cd SmartHire
 
 # Build and start all services
 docker-compose up --build
 ```
+
+### 🧠 AI Model Setup
+Since AI models are large (>500MB), they are not included in this repository. You must download them after setting up the environment:
+
+#### **Automated Download**
+1. **Voice Models** (Kokoro, Moonshine):
+   ```bash
+   cd backend
+   python app/scripts/download_voice_models.py
+   ```
+2. **LLM Models** (Ollama):
+   ```bash
+   # Ensure Ollama is running (or via Docker)
+   python backend/app/scripts/pull_models.py
+   ```
 
 ### 🔨 Manual Setup
 
@@ -79,7 +94,8 @@ docker-compose up --build
 1. Navigate to `backend/`
 2. Create virtual environment: `python -m venv venv`
 3. Install dependencies: `pip install -r requirements.txt`
-4. Run: `uvicorn app.main:app --reload`
+4. Run: `python app/scripts/download_voice_models.py`
+5. Start: `uvicorn app.main:app --reload`
 
 #### **Frontend**
 1. Navigate to `frontend/`
