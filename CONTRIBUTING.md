@@ -30,4 +30,5 @@ We love new ideas! If you have an enhancement in mind:
 * **Documentation**: Keep the professional, data-centric tone.
 
 ## Any Questions?
-Reach out to us at founders@prism.ai or open an issue!
+Reach out to us at aman.t.shekar03@gmail.com or open an issue!
+

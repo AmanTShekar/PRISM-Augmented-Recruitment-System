@@ -340,5 +340,6 @@ We're building the recruitment infrastructure for the next generation of compani
 
 ---
 
-*For more information, visit our documentation at `/docs` or contact us at founders@PRISM.ai*
+*For more information, visit our documentation at `/docs` or contact us at aman.t.shekar03@gmail.com*
+
 

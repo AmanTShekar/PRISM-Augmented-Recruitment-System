@@ -124,7 +124,7 @@ As AI models are large (>500MB), they must be pulled after the services start:
 ---
 
 ## 📄 License & Legal
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details. For commercial inquiries, contact [founders@PRISM.ai].
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details. For commercial inquiries, contact [aman.t.shekar03@gmail.com].
 
 ---
 
@@ -132,4 +132,5 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
   <p>Built with ❤️ by the PRISM Team</p>
   <p><i>"Defining the next era of autonomous recruitment."</i></p>
 </div>
+
 
