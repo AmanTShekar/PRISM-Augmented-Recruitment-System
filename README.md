@@ -1,67 +1,42 @@
 ---
 
-<!-- SEO & SEARCH OPTIMIZATION -->
-<!-- Keywords: AI Recruitment, Autonomous Hiring, Machine Learning, NLP, MediaPipe, Sentence-Transformers, FastAPI, React, Recruitment Automation, Bias-free Hiring -->
+## 🧠 Comprehensive AI Model Specifications
 
-<div align="center">
-  <img src="docs/assets/cover.png" alt="SmartHire Banner" width="100%">
-  
-  <h1>SmartHire 🚀</h1>
-  <p><b>The Future of Autonomous Recruitment Protocol</b></p>
+SmartHire integrates a multi-modal AI stack. Below are the specific models and engines that power the platform:
 
-  <p>
-    <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version">
-    <img src="https://img.shields.io/badge/License-PolyForm%20Noncommercial-blueviolet.svg" alt="License">
-    <img src="https://img.shields.io/badge/Stack-FastAPI%20%7C%20React%20%7C%20AI-orange" alt="Stack">
-    <img src="https://img.shields.io/badge/AI-MediaPipe%20%7C%20Whisper%20%7C%20SBERT-red" alt="AI">
-  </p>
+### 1. **Large Language Models (Orchestration & Reasoning)**
+*   **DeepSeek-R1 / Phi-3.5**: Used for Deep Reasoning and Chain-of-Thought (CoT) evaluation of candidate answers.
+*   **Llama-3.2 (3B)**: Powers the autonomous JD-to-Criteria generator and real-time interviewer prompt engineering.
+*   **Ollama**: Acts as the local inference engine for all GGUF-based models.
 
-  <p align="center">
-    <i>"Hire on Merit. Scale on AI. Built for the Next Generation of Talent."</i>
-  </p>
-</div>
+### 2. **Embedding & Semantic Search (The Resonance Engine)**
+*   **BGE-M3 / SBERT**: Generates 1536-dimensional dense vectors. It supports multi-lingual embeddings and cross-lingual resume matching.
+*   **LanceDB**: A serverless vector database used to store and query candidate profiles with sub-10ms latency.
 
----
+### 3. **Computer Vision (The Sentinel System)**
+*   **MediaPipe (Face Mesh)**: Real-time tracking of 468 3D facial landmarks.
+*   **YOLOv8n**: Used for object detection to ensure interview integrity (detecting multiple people or unauthorized devices).
+*   **BlazeFace**: Lightweight face detection for initial bounding box stabilization.
 
-## 🌟 Vision
-**SmartHire** is a truly autonomous AI recruitment platform designed to eliminate human bias and identify top-tier talent through deep reasoning. We're moving beyond simple keyword matching to understanding *how* candidates think and solve problems.
-
-## 🛠️ Core Technology Pillars
-
-### 1. 🛡️ Zero Bias Protocol (PII Obfuscation)
-Evaluates candidates purely as anonymous skill vectors. All Personally Identifiable Information (PII) is stripped at ingestion to ensure a 100% merit-based evaluation process.
-
-### 2. 🧠 Deep Reasoning Engine
-Powered by **DeepSeek-R1** and **L8 Chain-of-Thought (CoT)**, our engine evaluates candidate responses by tracing their logic, not just checking for keywords. It understands context, complexity, and problem-solving depth.
-
-### 3. 👁️ Sentinel System (Biometric Analysis)
-Leveraging **MediaPipe**, Sentinel tracks 468 facial landmarks at 60Hz during interviews to measure genuine engagement, cognitive load, and authenticity, ensuring an objective assessment of soft skills.
-
-### 4. 🧬 Resonance Engine (Semantic Matching)
-Utilizing **Sentence-Transformers (SBERT)**, the Resonance Engine creates 1536-dimensional vector embeddings of resumes and job descriptions. Unlike traditional ATS, it understands the *semantic relationship* between skills (e.g., knowing that 'FastAPI' and 'Web Frameworks' are related), leading to unprecedented matching accuracy.
+### 4. **Speech & Audio Intelligence**
+*   **Faster-Whisper (Large-v3)**: State-of-the-art transcription engine for interview audio.
+*   **Kokoro-v0.19**: High-quality, low-latency text-to-speech (TTS) for the AI interviewer's voice.
+*   **Moonshine-Tiny**: Ultra-fast, on-device ASR (Automatic Speech Recognition) for real-time interaction feedback.
 
 ---
 
-## 🚀 Key Features
+## 🏗️ System Architecture & Services
 
-- 🤖 **Autonomous Screening**: JD-to-Criteria generation and initial AI-led interviews.
-- 💻 **Technical Assessment**: Real-time coding challenges with deep logic evaluation.
-- 🎤 **Audio/Video Intelligence**: Seamless transcription (Faster-Whisper) and behavioral analysis.
-- 📊 **Insight Dashboard**: Real-time hiring metrics, bias detection reports, and quality-of-hire predictions.
-- ⚡ **Neural Architecture**: Sharded interview processing for infinite horizontal scalability using Docker.
+The platform is built as a sharded microservices architecture managed via **Docker Compose**:
 
----
-
-## 🏗️ Technical Stack
-
-| Component | Technology | Role |
+| Service | Technology | Logic Location |
 | :--- | :--- | :--- |
-| **Backend** | [FastAPI](https://fastapi.tiangolo.com/) | High-performance Asynchronous API |
-| **Frontend** | [React](https://reactjs.org/) + [Vite](https://vitejs.dev/) | Sleek 'Void Black' Aesthetic UI |
-| **Semantic AI** | [Sentence-Transformers](https://www.sbert.net/) | Resume-Job Semantic Alignment |
-| **Computer Vision** | [MediaPipe](https://mediapipe.dev/) | Sentinel Biometric Tracking |
-| **Speech** | [Faster-Whisper](https://github.com/guillaumekln/faster-whisper) | Low-latency Audio Transcription |
-| **Ops** | [Docker](https://www.docker.com/) | Containerized Microservices & Scaling |
+| **API Core** | FastAPI | `backend/app/main.py` |
+| **AI Workflows** | Celery + Redis | `backend/app/workers/` |
+| **Identity/Sentinel** | OpenCV + MediaPipe | `backend/app/services/sentinel_identity.py` |
+| **Resume Intel** | SBERT + PyMuPDF | `backend/app/services/pdf.py` |
+| **Voice Engine** | ONNX Runtime | `backend/app/services/voice.py` |
+| **Vector Search** | LanceDB | `backend/app/db/` |
 
 ---
 
