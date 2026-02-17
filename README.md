@@ -5,7 +5,7 @@
   
   <p align="center">
     <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version">
-    <img src="https://img.shields.io/badge/License-PolyForm%20Noncommercial-blueviolet.svg" alt="License">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
     <img src="https://img.shields.io/badge/Stack-FastAPI%20%7C%20React%20%7C%20AI-orange" alt="Stack">
     <img src="https://img.shields.io/badge/AI-DeepSeek%20%7C%20MediaPipe%20%7C%20SBERT-red" alt="AI">
     <img src="https://img.shields.io/badge/Database-PostgreSQL%20%7C%20LanceDB-green" alt="Database">
@@ -124,7 +124,7 @@ As AI models are large (>500MB), they must be pulled after the services start:
 ---
 
 ## 📄 License & Legal
-This project is licensed under the **PolyForm Noncommercial License 1.0.0**. For commercial inquiries, contact [founders@PRISM.ai].
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details. For commercial inquiries, contact [founders@PRISM.ai].
 
 ---
 
