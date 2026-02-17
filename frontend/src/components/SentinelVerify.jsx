@@ -119,7 +119,7 @@ const SentinelVerify = ({ candidateId, onVerified }) => {
                     <Shield className="w-6 h-6 text-emerald-400" />
                 </div>
                 <div>
-                    <h2 className="text-2xl font-bold text-white tracking-tight">SmartHire Sentinel</h2>
+                    <h2 className="text-2xl font-bold text-white tracking-tight">PRISM Sentinel</h2>
                     <p className="text-xs text-emerald-400/70 font-mono uppercase tracking-widest">Biometric Handshake v3.0</p>
                 </div>
             </div>
@@ -219,3 +219,4 @@ const SentinelVerify = ({ candidateId, onVerified }) => {
 };
 
 export default SentinelVerify;
+

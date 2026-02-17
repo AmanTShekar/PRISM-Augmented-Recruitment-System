@@ -73,7 +73,7 @@ function CreatorInfoContent() {
                         <div className="flex-1">
                             <h3 className="font-bold text-2xl text-white mb-4">Developer Information</h3>
                             <p className="text-zinc-400 leading-relaxed mb-4">
-                                SmartHire is built by an independent developer passionate about using AI to solve real-world problems in recruitment.
+                                PRISM is built by an independent developer passionate about using AI to solve real-world problems in recruitment.
                                 The project combines expertise in machine learning, backend systems, and product design.
                             </p>
                             <div className="font-mono text-sm text-zinc-600">
@@ -91,7 +91,7 @@ function CreatorInfoContent() {
                     Traditional recruitment is broken. Bias is systemic, processes don't scale, and the best candidates are often filtered out by keyword-matching ATS systems.
                 </p>
                 <p className="text-lg text-zinc-400 leading-relaxed mb-6">
-                    SmartHire was built to prove that AI can eliminate bias, scale infinitely, and run on consumer hardware—without compromising on quality.
+                    PRISM was built to prove that AI can eliminate bias, scale infinitely, and run on consumer hardware—without compromising on quality.
                 </p>
             </section>
 
@@ -99,9 +99,9 @@ function CreatorInfoContent() {
                 <SectionHeader title="Connect" number="03" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
-                        { label: 'GitHub', value: 'github.com/smarthire', icon: GitBranch },
-                        { label: 'Email', value: 'contact@smarthire.dev', icon: Terminal },
-                        { label: 'Documentation', value: 'docs.smarthire.dev', icon: Code },
+                        { label: 'GitHub', value: 'github.com/PRISM', icon: GitBranch },
+                        { label: 'Email', value: 'contact@PRISM.dev', icon: Terminal },
+                        { label: 'Documentation', value: 'docs.PRISM.dev', icon: Code },
                         { label: 'Status', value: 'Active Development', icon: Activity },
                     ].map((item, i) => (
                         <div key={i} className="flex items-center gap-4 p-4 border border-white/10 bg-white/[0.01]">
@@ -129,7 +129,7 @@ function BackendArchitectureContent() {
 
                 <CodeBlock
                     label="MAIN.PY"
-                    code={`from fastapi import FastAPI, BackgroundTasks\nfrom fastapi.middleware.cors import CORSMiddleware\nimport redis\nimport uvicorn\n\napp = FastAPI(title="SmartHire API", version="1.0.0")\n\n# CORS middleware\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=["*"],\n    allow_methods=["*"],\n    allow_headers=["*"],\n)\n\n# Redis connection\nredis_client = redis.Redis(host='localhost', port=6379, db=0)\n\n@app.post("/v1/sessions")\nasync def create_session(background_tasks: BackgroundTasks):\n    # Queue interview processing\n    job_id = enqueue_job(background_tasks)\n    return {"session_id": job_id, "status": "queued"}\n\nif __name__ == "__main__":\n    uvicorn.run(app, host="0.0.0.0", port=8000)`}
+                    code={`from fastapi import FastAPI, BackgroundTasks\nfrom fastapi.middleware.cors import CORSMiddleware\nimport redis\nimport uvicorn\n\napp = FastAPI(title="PRISM API", version="1.0.0")\n\n# CORS middleware\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=["*"],\n    allow_methods=["*"],\n    allow_headers=["*"],\n)\n\n# Redis connection\nredis_client = redis.Redis(host='localhost', port=6379, db=0)\n\n@app.post("/v1/sessions")\nasync def create_session(background_tasks: BackgroundTasks):\n    # Queue interview processing\n    job_id = enqueue_job(background_tasks)\n    return {"session_id": job_id, "status": "queued"}\n\nif __name__ == "__main__":\n    uvicorn.run(app, host="0.0.0.0", port=8000)`}
                 />
             </section>
 
@@ -223,7 +223,7 @@ function DeploymentContent() {
                 <SectionHeader title="Installation" number="02" />
                 <CodeBlock
                     label="INSTALL.SH"
-                    code={`# Clone repository\ngit clone https://github.com/smarthire/smarthire.git\ncd smarthire\n\n# Create virtual environment\npython3 -m venv venv\nsource venv/bin/activate\n\n# Install dependencies\npip install -r requirements.txt\n\n# Download models\npython scripts/download_models.py\n\n# Setup database\npsql -U postgres -c "CREATE DATABASE smarthire;"\nalembic upgrade head\n\n# Start Redis\nredis-server --daemonize yes\n\n# Start backend\nuvicorn main:app --reload --host 0.0.0.0 --port 8000\n\n# Start workers (separate terminal)\npython worker.py`}
+                    code={`# Clone repository\ngit clone https://github.com/PRISM/PRISM.git\ncd PRISM\n\n# Create virtual environment\npython3 -m venv venv\nsource venv/bin/activate\n\n# Install dependencies\npip install -r requirements.txt\n\n# Download models\npython scripts/download_models.py\n\n# Setup database\npsql -U postgres -c "CREATE DATABASE PRISM;"\nalembic upgrade head\n\n# Start Redis\nredis-server --daemonize yes\n\n# Start backend\nuvicorn main:app --reload --host 0.0.0.0 --port 8000\n\n# Start workers (separate terminal)\npython worker.py`}
                 />
             </section>
 
@@ -231,7 +231,7 @@ function DeploymentContent() {
                 <SectionHeader title="Docker Setup" number="03" />
                 <CodeBlock
                     label="DOCKER-COMPOSE.YML"
-                    code={`version: '3.8'\n\nservices:\n  api:\n    build: .\n    ports:\n      - "8000:8000"\n    environment:\n      - DATABASE_URL=postgresql://postgres:password@db:5432/smarthire\n      - REDIS_URL=redis://redis:6379\n    depends_on:\n      - db\n      - redis\n    deploy:\n      resources:\n        reservations:\n          devices:\n            - driver: nvidia\n              count: 1\n              capabilities: [gpu]\n\n  worker:\n    build: .\n    command: python worker.py\n    environment:\n      - REDIS_URL=redis://redis:6379\n    depends_on:\n      - redis\n\n  db:\n    image: postgres:15\n    environment:\n      - POSTGRES_PASSWORD=password\n      - POSTGRES_DB=smarthire\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\n  redis:\n    image: redis:7-alpine\n    ports:\n      - "6379:6379"\n\nvolumes:\n  postgres_data:`}
+                    code={`version: '3.8'\n\nservices:\n  api:\n    build: .\n    ports:\n      - "8000:8000"\n    environment:\n      - DATABASE_URL=postgresql://postgres:password@db:5432/PRISM\n      - REDIS_URL=redis://redis:6379\n    depends_on:\n      - db\n      - redis\n    deploy:\n      resources:\n        reservations:\n          devices:\n            - driver: nvidia\n              count: 1\n              capabilities: [gpu]\n\n  worker:\n    build: .\n    command: python worker.py\n    environment:\n      - REDIS_URL=redis://redis:6379\n    depends_on:\n      - redis\n\n  db:\n    image: postgres:15\n    environment:\n      - POSTGRES_PASSWORD=password\n      - POSTGRES_DB=PRISM\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\n  redis:\n    image: redis:7-alpine\n    ports:\n      - "6379:6379"\n\nvolumes:\n  postgres_data:`}
                 />
             </section>
         </>
@@ -245,7 +245,7 @@ function ContributingContent() {
                 <SectionHeader title="Development Setup" number="01" />
                 <CodeBlock
                     label="SETUP.SH"
-                    code={`# Fork and clone\ngit clone https://github.com/YOUR_USERNAME/smarthire.git\ncd smarthire\n\n# Create branch\ngit checkout -b feature/your-feature-name\n\n# Install dev dependencies\npip install -r requirements-dev.txt\n\n# Install pre-commit hooks\npre-commit install\n\n# Run tests\npytest tests/ -v\n\n# Run linter\nruff check .\nblack --check .`}
+                    code={`# Fork and clone\ngit clone https://github.com/YOUR_USERNAME/PRISM.git\ncd PRISM\n\n# Create branch\ngit checkout -b feature/your-feature-name\n\n# Install dev dependencies\npip install -r requirements-dev.txt\n\n# Install pre-commit hooks\npre-commit install\n\n# Run tests\npytest tests/ -v\n\n# Run linter\nruff check .\nblack --check .`}
                 />
             </section>
 
@@ -293,3 +293,4 @@ function ContributingContent() {
         </>
     );
 }
+

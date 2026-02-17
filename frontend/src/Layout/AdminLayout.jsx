@@ -25,7 +25,7 @@ const AdminLayout = () => {
 
             <aside className="w-64 border-r flex flex-col bg-soft z-50">
                 <div className="h-20 flex items-center px-8 border-b">
-                    <Link to="/" className="font-bold tracking-tighter text-lg uppercase">SmartHire</Link>
+                    <Link to="/" className="font-bold tracking-tighter text-lg uppercase">PRISM</Link>
                 </div>
                 <div className="px-6 py-4 border-b">
                     <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-text-muted mb-1">
@@ -74,3 +74,4 @@ const AdminLayout = () => {
 };
 
 export default AdminLayout;
+

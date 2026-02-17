@@ -8,16 +8,16 @@ const LEGAL_CONTENT = {
     terms: {
         title: "Terms of Service",
         content: `1. Acceptance of Terms
-By accessing or using SmartHire ("the Platform"), you agree to be bound by these Terms.
+By accessing or using PRISM ("the Platform"), you agree to be bound by these Terms.
         
 2. Use of Services
 The Platform provides autonomous recruitment tools. You agree to use these services only for lawful purposes acting in good faith.
         
 3. Intellectual Property
-All content, design, and code on SmartHire is the proprietary property of SmartHire Inc.
+All content, design, and code on PRISM is the proprietary property of PRISM Inc.
         
 4. Liability
-SmartHire is not liable for hiring decisions made using our autonomous tools. The final decision rests with the company.`
+PRISM is not liable for hiring decisions made using our autonomous tools. The final decision rests with the company.`
     },
     privacy: {
         title: "Privacy Policy",
@@ -36,7 +36,7 @@ You have the right to access, correct, or delete your data at any time.`
     dpa: {
         title: "Data Processing Agreement",
         content: `1. Scope and Purpose
-This DPA applies to the processing of personal data by SmartHire on behalf of the Customer.
+This DPA applies to the processing of personal data by PRISM on behalf of the Customer.
         
 2. Processing Instructions
 We process data only in accordance with your documented instructions and the requirements of applicable law.
@@ -130,7 +130,7 @@ const AuthPage = () => {
                     className="bg-zinc-900/50 border border-white/10 rounded-2xl p-8 backdrop-blur-xl"
                 >
                     <div className="mb-8 text-center">
-                        <div className="text-2xl font-bold tracking-tight text-white mb-2">SmartHire</div>
+                        <div className="text-2xl font-bold tracking-tight text-white mb-2">PRISM</div>
                         <h1 className="text-xl font-medium text-zinc-400">
                             {mode === 'login' ? 'Sign in to your account' : 'Create your account'}
                         </h1>
@@ -417,3 +417,4 @@ const AuthPage = () => {
 };
 
 export default AuthPage;
+

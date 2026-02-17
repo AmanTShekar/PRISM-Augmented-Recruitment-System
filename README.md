@@ -1,7 +1,7 @@
-# SmartHire: Autonomous AI Recruitment Protocol 🚀
+# PRISM: Autonomous AI Recruitment Protocol 🚀
 
 <div align="center">
-  <img src="docs/assets/cover.png" alt="SmartHire Banner" width="100%">
+  <img src="docs/assets/cover.png" alt="PRISM Banner" width="100%">
   
   <p align="center">
     <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version">
@@ -20,7 +20,7 @@
 
 ## 🌟 Vision & Philosophy
 
-**SmartHire** is built on the premise that recruitment is fundamentally broken: biased, unscalable, and expensive. Our protocol replaces superficial keyword matching with **Deep Reasoning**. We understand not just what a candidate knows, but *how they think*.
+**PRISM** is built on the premise that recruitment is fundamentally broken: biased, unscalable, and expensive. Our protocol replaces superficial keyword matching with **Deep Reasoning**. We understand not just what a candidate knows, but *how they think*.
 
 ### Core Value Pillars
 - 🛡️ **Zero Bias**: Automated PII obfuscation evaluating candidates purely as anonymous skill vectors.
@@ -32,7 +32,7 @@
 
 ## 🧠 Comprehensive AI Engine Specifications
 
-SmartHire leverages a state-of-the-art, multi-modal AI stack for total recruitment autonomy:
+PRISM leverages a state-of-the-art, multi-modal AI stack for total recruitment autonomy:
 
 ### 1. Reasoning & Orchestration (The Brain)
 - **Engine**: [Ollama](https://ollama.ai/)
@@ -78,8 +78,8 @@ Docker ensures all C++ and AI dependencies (MediaPipe, SBERT, ONNX) are perfectl
 
 ```bash
 # Clone the repository
-git clone https://github.com/AmanTShekar/SmartHire-Augmented-Recruitment-System.git
-cd SmartHire
+git clone https://github.com/AmanTShekar/PRISM-Augmented-Recruitment-System.git
+cd PRISM
 
 # Build the ecosystem
 docker-compose up --build
@@ -124,11 +124,12 @@ As AI models are large (>500MB), they must be pulled after the services start:
 ---
 
 ## 📄 License & Legal
-This project is licensed under the **PolyForm Noncommercial License 1.0.0**. For commercial inquiries, contact [founders@smarthire.ai].
+This project is licensed under the **PolyForm Noncommercial License 1.0.0**. For commercial inquiries, contact [founders@PRISM.ai].
 
 ---
 
 <div align="center">
-  <p>Built with ❤️ by the SmartHire Team</p>
+  <p>Built with ❤️ by the PRISM Team</p>
   <p><i>"Defining the next era of autonomous recruitment."</i></p>
 </div>
+

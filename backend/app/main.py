@@ -21,7 +21,7 @@ from app.scripts.seed_admin import seed_admin
 from app.scripts.pull_models import pull_models
 from app.scripts.download_voice_models import main as download_voice_models
 
-app = FastAPI(title="SmartHire Backend", version="2.0.0")
+app = FastAPI(title="PRISM Backend", version="2.0.0")
 
 @app.on_event("startup")
 async def startup_event():
@@ -201,3 +201,4 @@ async def ingest_profile(profile_data: dict):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+

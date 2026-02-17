@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings
 from typing import Optional
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "SmartHire"
+    PROJECT_NAME: str = "PRISM"
     API_V1_STR: str = "/api"
     
     # Database
@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     POSTGRES_PASSWORD: str = "password"
     POSTGRES_SERVER: str = "localhost"
     POSTGRES_PORT: str = "5432"
-    POSTGRES_DB: str = "smarthire"
+    POSTGRES_DB: str = "PRISM"
     DATABASE_URL: Optional[str] = None
 
     # Redis
@@ -31,3 +31,4 @@ class Settings(BaseSettings):
         env_file = ".env"
 
 settings = Settings()
+

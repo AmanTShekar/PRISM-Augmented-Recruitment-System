@@ -88,7 +88,7 @@ const ProfilePage = () => {
             const API_BASE = import.meta.env.VITE_API_URL || '/api';
             const res = await fetch(`${API_BASE}/resume/upload`, {
                 method: 'POST',
-                headers: { Authorization: `Bearer ${localStorage.getItem('smarthire_token')}` },
+                headers: { Authorization: `Bearer ${localStorage.getItem('PRISM_token')}` },
                 body: fd,
             });
             if (res.ok) {
@@ -276,3 +276,4 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+

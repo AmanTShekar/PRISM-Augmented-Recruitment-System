@@ -1,4 +1,4 @@
-# SmartHire Backend
+# PRISM Backend
 
 High-performance FastAPI backend with "Power Stack" architecture.
 
@@ -36,3 +36,4 @@ docker-compose up --build
 Once running, visit:
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
+

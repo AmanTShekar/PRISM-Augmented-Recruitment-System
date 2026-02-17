@@ -11,7 +11,7 @@ const Layout = () => {
 
             <aside className="w-64 border-r flex flex-col bg-soft z-50">
                 <div className="h-20 flex items-center px-8 border-b">
-                    <span className="font-bold tracking-tighter text-lg uppercase">SmartHire</span>
+                    <span className="font-bold tracking-tighter text-lg uppercase">PRISM</span>
                 </div>
                 <nav className="flex-1 p-4 flex flex-col gap-1">
                     <SidebarLink to="/dashboard" icon={<LayoutDashboard size={18} />} label="Overview" active={location.pathname === '/dashboard'} />
@@ -52,3 +52,4 @@ const SidebarLink = ({ to, icon, label, active }) => (
 );
 
 export default Layout;
+

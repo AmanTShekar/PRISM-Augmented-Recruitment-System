@@ -44,4 +44,5 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 
 @router.get("/health")
 def health_check():
-    return {"status": "healthy", "service": "SmartHire API (Power Stack)"}
+    return {"status": "healthy", "service": "PRISM API (Power Stack)"}
+

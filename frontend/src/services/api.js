@@ -1,4 +1,4 @@
-// API Client for SmartHire Backend
+// API Client for PRISM Backend
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 class APIClient {
@@ -197,3 +197,4 @@ class APIClient {
 // Export singleton instance
 const apiClient = new APIClient();
 export default apiClient;
+

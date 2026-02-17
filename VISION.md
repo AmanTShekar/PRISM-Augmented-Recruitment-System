@@ -1,8 +1,8 @@
-# SmartHire: The Future of Autonomous Recruitment
+# PRISM: The Future of Autonomous Recruitment
 
 ## Vision Statement
 
-**SmartHire is the world's first truly autonomous AI recruitment platform that eliminates human bias, scales infinitely, and identifies the best candidates through deep reasoning—not keyword matching.**
+**PRISM is the world's first truly autonomous AI recruitment platform that eliminates human bias, scales infinitely, and identifies the best candidates through deep reasoning—not keyword matching.**
 
 We're building the recruitment infrastructure for the next generation of companies who refuse to compromise on talent quality while demanding operational efficiency at scale.
 
@@ -38,7 +38,7 @@ We're building the recruitment infrastructure for the next generation of compani
 
 ---
 
-## The SmartHire Solution
+## The PRISM Solution
 
 ### Core Technology Stack
 
@@ -84,12 +84,12 @@ We're building the recruitment infrastructure for the next generation of compani
 
 ---
 
-## What SmartHire Does
+## What PRISM Does
 
 ### For Companies
 
 #### **Autonomous Candidate Screening**
-- Upload job description → SmartHire generates custom evaluation criteria
+- Upload job description → PRISM generates custom evaluation criteria
 - Candidates apply through our bias-free interface
 - AI conducts initial screening interviews (text or video)
 - Top 5% candidates are surfaced with detailed reasoning reports
@@ -158,13 +158,13 @@ We're building the recruitment infrastructure for the next generation of compani
 - Want to reduce cost-per-hire
 
 #### **Tertiary: Recruitment Agencies**
-- White-label SmartHire for their clients
+- White-label PRISM for their clients
 - Scale their operations without hiring more recruiters
 - Differentiate with AI-powered assessments
 
 ### Competitive Advantages
 
-| Feature | SmartHire | Traditional ATS | Other AI Tools |
+| Feature | PRISM | Traditional ATS | Other AI Tools |
 |---------|-----------|-----------------|----------------|
 | **Bias Elimination** | ✅ PII stripped at ingestion | ❌ Keyword matching | ⚠️ Partial |
 | **Deep Reasoning** | ✅ L8 CoT analysis | ❌ None | ⚠️ Basic NLP |
@@ -251,13 +251,13 @@ We're building the recruitment infrastructure for the next generation of compani
 ### Key Messages
 
 #### **For Engineering Leaders**
-*"Stop losing great engineers to broken hiring processes. SmartHire evaluates 1000 candidates with the rigor you'd apply to 10—and surfaces the top 1% you'd actually want to hire."*
+*"Stop losing great engineers to broken hiring processes. PRISM evaluates 1000 candidates with the rigor you'd apply to 10—and surfaces the top 1% you'd actually want to hire."*
 
 #### **For HR/People Ops**
 *"Meet your diversity goals without compromising on quality. Our PII obfuscation ensures every candidate is evaluated purely on capability, creating a legally defensible, bias-free hiring process."*
 
 #### **For CEOs/Founders**
-*"Your competitive advantage is your team. SmartHire helps you build the best one—faster, cheaper, and more fairly than ever before."*
+*"Your competitive advantage is your team. PRISM helps you build the best one—faster, cheaper, and more fairly than ever before."*
 
 #### **For Candidates**
 *"Finally, a hiring process that sees your potential, not your pedigree. Show us what you can do, and we'll connect you with companies that value your skills."*
@@ -332,12 +332,13 @@ We're building the recruitment infrastructure for the next generation of compani
 
 ---
 
-## The SmartHire Promise
+## The PRISM Promise
 
 **We believe every candidate deserves to be evaluated on their merit, not their background. We believe every company deserves access to the best talent, not just the most visible. We believe the future of work is built on capability, not credentials.**
 
-**SmartHire is the recruitment infrastructure for that future.**
+**PRISM is the recruitment infrastructure for that future.**
 
 ---
 
-*For more information, visit our documentation at `/docs` or contact us at founders@smarthire.ai*
+*For more information, visit our documentation at `/docs` or contact us at founders@PRISM.ai*
+

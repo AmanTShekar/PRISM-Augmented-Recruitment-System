@@ -6,13 +6,13 @@ const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [token, setToken] = useState(localStorage.getItem('smarthire_token'));
+    const [token, setToken] = useState(localStorage.getItem('PRISM_token'));
     const [loading, setLoading] = useState(true);
 
     // On mount, check for existing token and load user
     useEffect(() => {
-        const savedToken = localStorage.getItem('smarthire_token');
-        const savedUser = localStorage.getItem('smarthire_user');
+        const savedToken = localStorage.getItem('PRISM_token');
+        const savedUser = localStorage.getItem('PRISM_user');
         if (savedToken && savedUser) {
             setToken(savedToken);
             try {
@@ -37,8 +37,8 @@ export const AuthProvider = ({ children }) => {
         }
 
         const data = await res.json();
-        localStorage.setItem('smarthire_token', data.access_token);
-        localStorage.setItem('smarthire_user', JSON.stringify(data.user));
+        localStorage.setItem('PRISM_token', data.access_token);
+        localStorage.setItem('PRISM_user', JSON.stringify(data.user));
         setToken(data.access_token);
         setUser(data.user);
         return data.user;
@@ -57,16 +57,16 @@ export const AuthProvider = ({ children }) => {
         }
 
         const data = await res.json();
-        localStorage.setItem('smarthire_token', data.access_token);
-        localStorage.setItem('smarthire_user', JSON.stringify(data.user));
+        localStorage.setItem('PRISM_token', data.access_token);
+        localStorage.setItem('PRISM_user', JSON.stringify(data.user));
         setToken(data.access_token);
         setUser(data.user);
         return data.user;
     };
 
     const logout = () => {
-        localStorage.removeItem('smarthire_token');
-        localStorage.removeItem('smarthire_user');
+        localStorage.removeItem('PRISM_token');
+        localStorage.removeItem('PRISM_user');
         setToken(null);
         setUser(null);
     };
@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
             if (res.ok) {
                 const data = await res.json();
                 setUser(data.user);
-                localStorage.setItem('smarthire_user', JSON.stringify(data.user));
+                localStorage.setItem('PRISM_user', JSON.stringify(data.user));
             }
         } catch {
             // Silently fail
@@ -104,7 +104,7 @@ export const AuthProvider = ({ children }) => {
 
         const data = await res.json();
         setUser(data.user);
-        localStorage.setItem('smarthire_user', JSON.stringify(data.user));
+        localStorage.setItem('PRISM_user', JSON.stringify(data.user));
         return data.user;
     };
 
@@ -162,3 +162,4 @@ export const useAuth = () => {
 };
 
 export default AuthContext;
+

@@ -1,6 +1,6 @@
 # Backend Dependency Guide: Audio & AI Services
 
-The SmartHire backend is currently running on **Python 3.13**, which is compatible with core services (FastAPI, LanceDB, Ollama) but has known limitations with specific AI packages.
+The PRISM backend is currently running on **Python 3.13**, which is compatible with core services (FastAPI, LanceDB, Ollama) but has known limitations with specific AI packages.
 
 ## Audio Features (TTS/STT)
 The following packages currently do not support Python 3.13:
@@ -27,3 +27,4 @@ I have placed the following assets in `backend/app/models/`:
 - `voices.json`: Downloaded.
 
 *Note: Moonshine-ONNX also requires model files (preprocessor and encoder/decoder) which are typically downloaded automatically by the package or can be manually placed in the models folder.*
+

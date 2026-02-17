@@ -43,7 +43,7 @@ const LandingPage = () => {
                             animate={{ opacity: 1 }}
                             className="text-xl font-bold tracking-tighter cursor-pointer flex items-center gap-2 bg-gradient-to-b from-white to-zinc-600 bg-clip-text text-transparent"
                         >
-                            SmartHire
+                            PRISM
                         </motion.div>
                         <div className="hidden md:flex gap-8 text-[10px] font-bold text-text-muted uppercase tracking-[0.2em]">
                             <span onClick={() => navigate('/docs#neural-architecture')} className="hover:text-white cursor-pointer transition-colors duration-300">Technology</span>
@@ -101,7 +101,7 @@ const LandingPage = () => {
 
                         <div className="flex flex-col md:flex-row gap-12 mt-16 items-start">
                             <motion.p variants={fadeInUp} className="text-xl text-text-secondary font-light leading-relaxed max-w-xl">
-                                SmartHire replaces subjective hiring with 8-layer cognitive chains, real-time proctoring mesh, and bias-free semantic capability analysis.
+                                PRISM replaces subjective hiring with 8-layer cognitive chains, real-time proctoring mesh, and bias-free semantic capability analysis.
                             </motion.p>
                         </div>
 
@@ -125,7 +125,7 @@ const LandingPage = () => {
                             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
                             className="text-8xl md:text-[140px] lg:text-[200px] font-bold tracking-tighter bg-gradient-to-b from-white to-zinc-600 bg-clip-text text-transparent"
                         >
-                            SmartHire
+                            PRISM
                         </motion.div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ const LandingPage = () => {
                 <div className="container-l">
                     <div className="flex flex-col md:flex-row justify-between gap-20 mb-32">
                         <div className="max-w-xs">
-                            <div className="text-2xl font-bold tracking-tighter text-white mb-6">SmartHire</div>
+                            <div className="text-2xl font-bold tracking-tighter text-white mb-6">PRISM</div>
                             <p className="text-sm text-text-muted leading-relaxed">
                                 Redefining human capital through the precise application of augmented intelligence.
                             </p>
@@ -178,7 +178,7 @@ const LandingPage = () => {
 
                     <div className="pt-8 border-t border-white/[0.08] flex flex-col md:flex-row justify-between items-center gap-6">
                         <div className="text-[10px] font-bold text-text-muted uppercase tracking-[0.2em]">
-                            © 2026 SmartHire. Augmented Systems Division.
+                            © 2026 PRISM. Augmented Systems Division.
                         </div>
                         <div className="flex gap-8 text-[10px] font-bold text-text-muted uppercase tracking-[0.2em]">
                             <span onClick={() => navigate('/docs#legal')} className="hover:text-white cursor-pointer transition-colors">Legal</span>
@@ -274,3 +274,4 @@ const FooterGroup = ({ title, links }) => {
 };
 
 export default LandingPage;
+

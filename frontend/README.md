@@ -1,6 +1,6 @@
 <div align="center" style="background-color: #0b0b0b; padding: 40px; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
-  <a href="https://github.com/username/SmartHire">
-    <h1 style="color: #4a4a4a; font-size: 64px; margin-bottom: 10px; text-decoration: none;">SmartHire</h1>
+  <a href="https://github.com/username/PRISM">
+    <h1 style="color: #4a4a4a; font-size: 64px; margin-bottom: 10px; text-decoration: none;">PRISM</h1>
   </a>
   <h3 style="color: #888888; font-weight: normal; margin-top: 0;">
     Intelligent, data-driven recruitment platform.
@@ -9,17 +9,17 @@
   <br>
 
   <p>
-    <a href="https://github.com/username/SmartHire/stargazers">
-      <img src="https://img.shields.io/github/stars/username/SmartHire?style=for-the-badge&color=24292e" alt="GitHub stars">
+    <a href="https://github.com/username/PRISM/stargazers">
+      <img src="https://img.shields.io/github/stars/username/PRISM?style=for-the-badge&color=24292e" alt="GitHub stars">
     </a>
-    <a href="https://github.com/username/SmartHire/network/members">
-      <img src="https://img.shields.io/github/forks/username/SmartHire?style=for-the-badge&color=24292e" alt="GitHub forks">
+    <a href="https://github.com/username/PRISM/network/members">
+      <img src="https://img.shields.io/github/forks/username/PRISM?style=for-the-badge&color=24292e" alt="GitHub forks">
     </a>
-    <a href="https://github.com/username/SmartHire/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/username/SmartHire?style=for-the-badge&color=24292e" alt="License">
+    <a href="https://github.com/username/PRISM/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/username/PRISM?style=for-the-badge&color=24292e" alt="License">
     </a>
-    <a href="https://github.com/username/SmartHire/issues">
-      <img src="https://img.shields.io/github/issues/username/SmartHire?style=for-the-badge&color=24292e" alt="Issues">
+    <a href="https://github.com/username/PRISM/issues">
+      <img src="https://img.shields.io/github/issues/username/PRISM?style=for-the-badge&color=24292e" alt="Issues">
     </a>
   </p>
 
@@ -31,7 +31,7 @@
         View Demo
       </button>
     </a>
-    <a href="https://github.com/username/SmartHire/wiki" style="text-decoration: none;">
+    <a href="https://github.com/username/PRISM/wiki" style="text-decoration: none;">
       <button style="background-color: #24292e; color: #ffffff; border: 1px solid #4a4a4a; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer;">
         Documentation
       </button>
@@ -58,5 +58,6 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
 
 

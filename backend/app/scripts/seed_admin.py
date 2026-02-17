@@ -18,15 +18,15 @@ from sqlalchemy import select
 async def seed_admin():
     async with AsyncSessionLocal() as db:
         # Check if admin already exists
-        result = await db.execute(select(User).where(User.email == "admin@smarthire.com"))
+        result = await db.execute(select(User).where(User.email == "admin@PRISM.com"))
         existing = result.scalars().first()
 
         if existing:
-            print("✔ Admin account already exists (admin@smarthire.com)")
+            print("✔ Admin account already exists (admin@PRISM.com)")
             return
 
         admin = User(
-            email="admin@smarthire.com",
+            email="admin@PRISM.com",
             hashed_password=get_password_hash("admin123"),
             full_name="Platform Admin",
             role=UserRole.ADMIN,
@@ -36,9 +36,10 @@ async def seed_admin():
         db.add(admin)
         await db.commit()
         print("✔ Admin account created:")
-        print("  Email:    admin@smarthire.com")
+        print("  Email:    admin@PRISM.com")
         print("  Password: admin123")
 
 
 if __name__ == "__main__":
     asyncio.run(seed_admin())
+
