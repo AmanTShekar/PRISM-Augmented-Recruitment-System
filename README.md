@@ -1,104 +1,130 @@
----
+# SmartHire: Autonomous AI Recruitment Protocol 🚀
 
-## 🧠 Comprehensive AI Model Specifications
+<div align="center">
+  <img src="docs/assets/cover.png" alt="SmartHire Banner" width="100%">
+  
+  <p align="center">
+    <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/License-PolyForm%20Noncommercial-blueviolet.svg" alt="License">
+    <img src="https://img.shields.io/badge/Stack-FastAPI%20%7C%20React%20%7C%20AI-orange" alt="Stack">
+    <img src="https://img.shields.io/badge/AI-DeepSeek%20%7C%20MediaPipe%20%7C%20SBERT-red" alt="AI">
+    <img src="https://img.shields.io/badge/Database-PostgreSQL%20%7C%20LanceDB-green" alt="Database">
+  </p>
 
-SmartHire integrates a multi-modal AI stack. Below are the specific models and engines that power the platform:
-
-### 1. **Large Language Models (Orchestration & Reasoning)**
-*   **DeepSeek-R1 / Phi-3.5**: Used for Deep Reasoning and Chain-of-Thought (CoT) evaluation of candidate answers.
-*   **Llama-3.2 (3B)**: Powers the autonomous JD-to-Criteria generator and real-time interviewer prompt engineering.
-*   **Ollama**: Acts as the local inference engine for all GGUF-based models.
-
-### 2. **Embedding & Semantic Search (The Resonance Engine)**
-*   **BGE-M3 / SBERT**: Generates 1536-dimensional dense vectors. It supports multi-lingual embeddings and cross-lingual resume matching.
-*   **LanceDB**: A serverless vector database used to store and query candidate profiles with sub-10ms latency.
-
-### 3. **Computer Vision (The Sentinel System)**
-*   **MediaPipe (Face Mesh)**: Real-time tracking of 468 3D facial landmarks.
-*   **YOLOv8n**: Used for object detection to ensure interview integrity (detecting multiple people or unauthorized devices).
-*   **BlazeFace**: Lightweight face detection for initial bounding box stabilization.
-
-### 4. **Speech & Audio Intelligence**
-*   **Faster-Whisper (Large-v3)**: State-of-the-art transcription engine for interview audio.
-*   **Kokoro-v0.19**: High-quality, low-latency text-to-speech (TTS) for the AI interviewer's voice.
-*   **Moonshine-Tiny**: Ultra-fast, on-device ASR (Automatic Speech Recognition) for real-time interaction feedback.
+  <p align="center">
+    <b>The world's first truly autonomous recruitment platform that eliminates human bias through deep reasoning and biometric engagement analysis.</b>
+  </p>
+</div>
 
 ---
 
-## 🏗️ System Architecture & Services
+## 🌟 Vision & Philosophy
 
-The platform is built as a sharded microservices architecture managed via **Docker Compose**:
+**SmartHire** is built on the premise that recruitment is fundamentally broken: biased, unscalable, and expensive. Our protocol replaces superficial keyword matching with **Deep Reasoning**. We understand not just what a candidate knows, but *how they think*.
 
-| Service | Technology | Logic Location |
+### Core Value Pillars
+- 🛡️ **Zero Bias**: Automated PII obfuscation evaluating candidates purely as anonymous skill vectors.
+- 🧠 **Cognitive Intelligence**: Chain-of-Thought reasoning for nuanced technical assessment.
+- 👁️ **Sentience Tracking**: High-frequency biometric analysis to measure genuine candidate engagement.
+- 🧬 **Semantic Resonance**: 1536d vector alignment between talent and opportunity.
+
+---
+
+## 🧠 Comprehensive AI Engine Specifications
+
+SmartHire leverages a state-of-the-art, multi-modal AI stack for total recruitment autonomy:
+
+### 1. Reasoning & Orchestration (The Brain)
+- **Engine**: [Ollama](https://ollama.ai/)
+- **Models**: `DeepSeek-R1`, `Phi-3.5`, `Llama-3.2 (3B)`
+- **Role**: Conducts L8 Chain-of-Thought (CoT) evaluation, generates adaptive interviewer prompts, and performs deep logic verification on coding responses.
+
+### 2. Semantic Resonance (The Matchmaker)
+- **Model**: `Sentence-Transformers (SBERT / BGE-M3)`
+- **Vector DB**: `LanceDB` (Serverless, Disk-based)
+- **Role**: Transforms resumes and job descriptions into high-dimensional embeddings. It identifies "non-obvious" fit patterns (e.g., recognizing that a 'Distributed Systems' expert is a fit for a 'Cloud Architect' role).
+
+### 3. Sentinel System (The Proctor)
+- **Framework**: `MediaPipe` + `OpenCV`
+- **Landmarks**: 468-point 3D Facial Mesh tracking at 60Hz.
+- **Role**: Monitors cognitive load, engagement variance, and authenticity during interviews. Detects proctoring violations (e.g., unauthorized devices) via `YOLOv8n`.
+
+### 4. Audio & Voice Synthesis
+- **ASR (Speech-to-Text)**: `Faster-Whisper (Large-v3)` & `Moonshine-Tiny`
+- **TTS (Text-to-Speech)**: `Kokoro-v0.19` (High-fidelity neural voice)
+- **Role**: Provides a natural, human-like verbal interaction experience with sub-200ms transcription latency.
+
+---
+
+## 🏗️ System Architecture
+
+Managed via **Docker Compose**, the system is orchestrated into specialized microservices:
+
+| Service | Technology | Description |
 | :--- | :--- | :--- |
-| **API Core** | FastAPI | `backend/app/main.py` |
-| **AI Workflows** | Celery + Redis | `backend/app/workers/` |
-| **Identity/Sentinel** | OpenCV + MediaPipe | `backend/app/services/sentinel_identity.py` |
-| **Resume Intel** | SBERT + PyMuPDF | `backend/app/services/pdf.py` |
-| **Voice Engine** | ONNX Runtime | `backend/app/services/voice.py` |
-| **Vector Search** | LanceDB | `backend/app/db/` |
+| **Gateway** | FastAPI | Asynchronous high-performance API entry point. |
+| **Worker Grid** | Celery + Redis | Handles heavy AI tasks (Transcription, Model Inference). |
+| **UI Hologram** | React + Framer Motion | Premium 'Void Black' interface with holographic components. |
+| **Cognitive DB** | PostgreSQL | Relational storage for candidate metadata and scoring. |
+| **Vector Index** | LanceDB | Low-latency semantic search and retrieval. |
+| **Inference Node** | Ollama | Local hosting of GGUF-based Reasoning Models. |
 
 ---
 
-## 🚦 Getting Started
+## � Getting Started
 
-### 🐳 Quick Start with Docker
-Docker is the recommended way to run SmartHire. It ensures all dependencies for AI libraries (like Sentence-Transformers and MediaPipe) are correctly configured.
+### 🐳 Deployment via Docker (Recommended)
+Docker ensures all C++ and AI dependencies (MediaPipe, SBERT, ONNX) are perfectly linked.
 
 ```bash
 # Clone the repository
 git clone https://github.com/AmanTShekar/SmartHire-Augmented-Recruitment-System.git
 cd SmartHire
 
-# Build and start all services (Backend, Frontend, DB, Redis, Ollama)
+# Build the ecosystem
 docker-compose up --build
 ```
-*Note: The first build will take a few minutes as it compiles AI dependencies.*
 
-### 🧠 AI Model Setup
-Since AI models are large (>500MB), they are not included in the repository. Run these scripts to populate your `backend/models` folder:
+### 🧠 Critical: Post-Install Model Pull
+As AI models are large (>500MB), they must be pulled after the services start:
 
-1. **Voice Models** (Kokoro, Moonshine):
+1. **Download Local Models** (ONNX/Voices):
    ```bash
    docker-compose exec backend python app/scripts/download_voice_models.py
    ```
-2. **LLM Models** (Ollama):
+2. **Pull Reasoning Models** (Ollama):
    ```bash
    docker-compose exec backend python app/scripts/pull_models.py
    ```
 
 ---
 
-## 🎯 Search & Optimization (SEO)
-To find this project easily:
-- `AI Recruitment System`
-- `Autonomous Hiring Platform`
-- `Sentence Transformers Resume Matcher`
-- `MediaPipe Interview Analysis`
-- `Bias-free AI Hiring`
+## 📊 Key Features & Capabilities
+
+- **Autonomous Screener**: JD entry → Auto-generated criteria → 24/7 AI Interviewing.
+- **Sentinel Identity**: 180-degree face verification and liveness detection.
+- **Reasoning Reports**: Generates full CoT logic traces for every hiring recommendation.
+- **Holographic Resumes**: Interactive, AI-enhanced candidate profile visualizations.
+- **Proctoring Suite**: Multi-person detection and screen-sharing integrity verification.
 
 ---
 
-## 📄 License
-This project is licensed under the **PolyForm Noncommercial License 1.0.0**.
-
----
-
-<div align="center">
-  <p>Built with ❤️ by the SmartHire Team</p>
-  <p><i>"Defining the next era of autonomous recruitment."</i></p>
-</div>
+## 🗺️ Roadmap 2026
 
 - [x] **Q1: Foundation** - Core bias-free screening & Sentinel v1.
-- [ ] **Q2: Intelligence** - DeepSeek-R1 Integration & Multi-language support.
-- [ ] **Q3: Scale** - API v1 and Enterprise ATS connectors.
-- [ ] **Q4: Platform** - White-labeling and Predictive Hiring Analytics.
+- [ ] **Q2: Intelligence** - DeepSeek-R1 full integration & Multi-language support.
+- [ ] **Q3: Scale** - API v1 and Enterprise ATS connectors (Greenhouse/Lever).
+- [ ] **Q4: Platform** - White-labeling for recruitment agencies and predictive analytics.
 
 ---
 
-## 📄 License
-This project is licensed under the **PolyForm Noncommercial License 1.0.0**. See [LICENSE](LICENSE) for details.
+## 🎯 Search & Optimization (SEO)
+`AI Recruitment System`, `Autonomous Hiring Platform`, `Deep Reasoning Interviewer`, `Sentinel AI Proctoring`, `Sentence-Transformers Matching`, `Machine Learning Recruitment`, `Zero Bias Hiring Protocol`.
 
+---
+
+## 📄 License & Legal
+This project is licensed under the **PolyForm Noncommercial License 1.0.0**. For commercial inquiries, contact [founders@smarthire.ai].
 
 ---
 
